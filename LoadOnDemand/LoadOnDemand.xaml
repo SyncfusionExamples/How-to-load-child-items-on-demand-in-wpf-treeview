@@ -1,0 +1,44 @@
+﻿<Window
+    x:Class="LoadOnDemandDemo.LoadOnDemand"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LoadOnDemandDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:skin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    Title="Load On Demand"
+    Width="550"
+    Height="600"
+    skin:SfSkinManager.VisualStyle="MaterialLight"
+    Icon="App.Ico"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <local:MusicInfoRepository />
+    </Window.DataContext>
+    <Grid>
+        <syncfusion:SfTreeView
+            x:Name="sfTreeView"
+            Margin="10"
+            AllowDragging="True"
+            BorderBrush="LightGray"
+            BorderThickness="1"
+            ExpandActionTrigger="Node"
+            FocusVisualStyle="{x:Null}"
+            IsAnimationEnabled="True"
+            ItemHeight="30"
+            LoadOnDemandCommand="{Binding TreeViewOnDemandCommand}"
+            ItemsSource="{Binding Menu}" >
+            <syncfusion:SfTreeView.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                        VerticalContentAlignment="Center"
+                        Content="{Binding ItemName}"
+                        FocusVisualStyle="{x:Null}"
+                        FontSize="12" />
+                </DataTemplate>
+            </syncfusion:SfTreeView.ItemTemplate>
+        </syncfusion:SfTreeView>
+    </Grid>
+</Window>
