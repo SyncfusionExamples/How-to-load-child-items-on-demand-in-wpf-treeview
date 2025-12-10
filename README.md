@@ -1,4 +1,4 @@
-# How to load child items on demand in WPF TreeView
+# How to Load Child Items on Demand in WPF TreeView?
 
 This repository describes how to load child items on demand in [WPF TreeView](https://www.syncfusion.com/wpf-controls/treeview) (SfTreeView).
 
@@ -35,3 +35,5 @@ private void ExecuteOnDemandLoading(object obj)
     }));
 }
 ```
+
+![Showing BusyIndicator when expanding the TreeView](BusyIndicatorWhenExpandingNodes.png)
