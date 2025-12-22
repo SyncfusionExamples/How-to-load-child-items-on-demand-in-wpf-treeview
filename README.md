@@ -36,4 +36,4 @@ private void ExecuteOnDemandLoading(object obj)
 }
 ```
 
-![Showing BusyIndicator when expanding the TreeView](BusyIndicatorWhenExpandingNodes.png)
+![Showing BusyIndicator when expanding the TreeView](BusyIndicatorWhenExpandingNodes.gif)
